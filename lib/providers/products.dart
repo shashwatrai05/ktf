@@ -1,7 +1,6 @@
 //import 'dart:convert';
 //import 'dart:io';
 import 'dart:convert';
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 //import 'package:http/http.dart' as http;
@@ -112,9 +111,9 @@ class Products with ChangeNotifier{
           'https://kick-that-fits-adccc-default-rtdb.firebaseio.com/products.json';
       final response = await http.get(Uri.parse(url));
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
-      if (extractedData == null) {
-        return;
-      }
+      //if (extractedData == null) {
+        //return;
+      //}
       
       final List<Product> loadedProducts = [];
       extractedData.forEach((prodId, prodData) {
@@ -130,7 +129,7 @@ class Products with ChangeNotifier{
       _items = loadedProducts;
       notifyListeners();
     } catch (error) {
-      throw (error);
+      rethrow;
     }
   }
 }

@@ -8,6 +8,8 @@ import '../widgtes/app_drawer.dart';
 class CartScreen extends StatelessWidget {
   static const routeName = '/Cart';
 
+  const CartScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
@@ -32,7 +34,7 @@ class CartScreen extends StatelessWidget {
                   const Spacer(),
                   Chip(
                     label: Text(
-                      '\₹${cart.totalAmount.toStringAsFixed(2)}',
+                      '₹${cart.totalAmount.toStringAsFixed(2)}',
                       style: TextStyle(
                           color: Theme.of(context)
                               .primaryTextTheme
@@ -77,7 +79,7 @@ class OrderButton extends StatefulWidget {
 }
 
 class _OrderButtonState extends State<OrderButton> {
-  var _isLoading = false;
+  final _isLoading = false;
   @override
   Widget build(BuildContext context) {
     return TextButton(

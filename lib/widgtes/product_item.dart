@@ -5,6 +5,8 @@ import '../providers/product.dart';
 import '../providers/cart.dart';
 
 class ProductItem extends StatelessWidget {
+  const ProductItem({super.key});
+
 
 /*
   final String id;
@@ -18,7 +20,7 @@ class ProductItem extends StatelessWidget {
     final product= Provider.of<Product>(context,listen: false);
     final cart = Provider.of<Cart>(context, listen: false);
     return Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                             margin: const EdgeInsets.all(10),
                             width: 160,
                             height: 400,
@@ -71,7 +73,7 @@ class ProductItem extends StatelessWidget {
                                      
                                   ),
                                 ),
-                                Text('₹'+product.price.toString(),
+                                Text('₹${product.price}',
                                 style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,

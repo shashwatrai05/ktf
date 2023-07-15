@@ -6,9 +6,11 @@ import 'package:ktf/screens/product_screen.dart';
 import 'package:provider/provider.dart';
 
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     
@@ -24,14 +26,14 @@ class MyApp extends StatelessWidget {
                 title: 'KICK THAT FITS',
                 theme: ThemeData(
                   //fontFamily: 'Lato',
-                  pageTransitionsTheme: PageTransitionsTheme(builders: {
+                  pageTransitionsTheme: const PageTransitionsTheme(builders: {
                   }),
                   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
                       .copyWith(secondary: Colors.deepOrange),
                 ),
-                home: ProductScreen(),
+                home: const ProductScreen(),
                 routes: {
-                  CartScreen.routeName:(ctx)=> CartScreen()
+                  CartScreen.routeName:(ctx)=> const CartScreen()
                 },              
               ),
       

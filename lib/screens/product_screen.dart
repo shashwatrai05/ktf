@@ -53,9 +53,9 @@ class _ProductScreenState extends State<ProductScreen> {
           
           Consumer<Cart>(
             builder: (_, cart, ch) => Badgee(
-              child: ch!,
               value: cart.itemCount.toString(),
               color: Colors.red,
+              child: ch!,
             ),
             child: IconButton(
               icon: const Icon(
@@ -69,7 +69,7 @@ class _ProductScreenState extends State<ProductScreen> {
         ],
         ),
         drawer: const AppDrawer(),
-        body: ProductsGrid(),
+        body: const ProductsGrid(),
       )
     ;
   }
