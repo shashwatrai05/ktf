@@ -3,9 +3,16 @@ import 'package:provider/provider.dart';
 import '../providers/product.dart';
 //import '../providers/products.dart';
 import '../providers/cart.dart';
+import '../screens/virtual_try_on.dart';
+import 'package:camera/camera.dart';
 
+// ignore: must_be_immutable
 class ProductItem extends StatelessWidget {
-  const ProductItem({super.key});
+  //const ProductItem({super.key});
+   CameraController? controller;
+   Future<void> initializeControllerFuture = Future<void>.value();
+
+
 
 
 /*
@@ -78,7 +85,17 @@ class ProductItem extends StatelessWidget {
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),),
-                                ElevatedButton(onPressed: (){}, child: const Text('TRY NOW!'))
+                                ElevatedButton(onPressed: (){
+                                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => VirtualTryOnPage(
+                                  controller: controller,
+                                  initializeControllerFuture:
+                                      initializeControllerFuture,
+                                )),
+                      );
+                                }, child: const Text('TRY NOW!'))
                               ],
                             ));
   }
