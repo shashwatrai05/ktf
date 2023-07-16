@@ -23,7 +23,7 @@ class ProductItem extends StatelessWidget {
                         padding: const EdgeInsets.all(5),
                             margin: const EdgeInsets.all(10),
                             width: 160,
-                            height: 400,
+                            height: 600,
                             decoration: BoxDecoration(
                             border: Border.all(color: Colors.black, width: 1.0),
                   color: Colors.grey,
