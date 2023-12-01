@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "512622753874",
+    "firebase_url": "https://kick-that-fits-adccc-default-rtdb.firebaseio.com",
+    "project_id": "kick-that-fits-adccc",
+    "storage_bucket": "kick-that-fits-adccc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512622753874:android:939843d34dbc631ceb878b",
+        "android_client_info": {
+          "package_name": "com.example.ktf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512622753874-mtdl2mpg7jd3lum5ufuklqi21qfla1hd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQfhrk0t5_vYN-qrX9Np-XVy7-XDDF3HE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512622753874-mtdl2mpg7jd3lum5ufuklqi21qfla1hd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

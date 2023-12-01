@@ -39,6 +39,17 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           const Divider(),
+          ListTile(
+            leading: const Icon(Icons.payment),
+            title: const Text('Know your Size'),
+            onTap: () {
+              // Navigator.of(context)
+              //   .pushReplacementNamed(OrdersScreen.routeName);
+              // Navigator.of(context).pushReplacement(
+              //     CustomRoute(builder: (ctx) => OrdersScreen()));
+            },
+          ),
+          const Divider(),
           /*
           ListTile(
             leading: const Icon(Icons.exit_to_app),

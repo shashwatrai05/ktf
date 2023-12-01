@@ -30,9 +30,9 @@ class ProductItem extends StatelessWidget {
                         padding: const EdgeInsets.all(5),
                             margin: const EdgeInsets.all(10),
                             width: 160,
-                            height: 600,
+                            height: 650,
                             decoration: BoxDecoration(
-                            border: Border.all(color: Colors.black, width: 1.0),
+                            border: Border.all(color: Colors.black, width: 2.0),
                   color: Colors.grey,
                   borderRadius: BorderRadius.circular(5),
                             ),
@@ -46,17 +46,18 @@ class ProductItem extends StatelessWidget {
                                 SizedBox(
                                   width: 148,
                                   child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                      Text(product.title,
                                     style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),),
-                                    IconButton(onPressed: (){
-                                      product.togglefavouriteStatus();
-                                    }, icon: Icon(product.isFavourite
-                                                  ? Icons.favorite
-                                                  : Icons.favorite_border_outlined)),
+                                    // IconButton(onPressed: (){
+                                    //   product.togglefavouriteStatus();
+                                    // }, icon: Icon(product.isFavourite
+                                    //               ? Icons.favorite
+                                    //               : Icons.favorite_border_outlined)),
                                                   IconButton(
                                             onPressed: () {
                                               cart.additem(product.id, product.price, product.title);
@@ -85,17 +86,25 @@ class ProductItem extends StatelessWidget {
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),),
-                                ElevatedButton(onPressed: (){
-                                  Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => VirtualTryOnPage(
-                                  controller: controller,
-                                  initializeControllerFuture:
-                                      initializeControllerFuture,
-                                )),
-                      );
-                                }, child: const Text('TRY NOW!'))
+                                ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => VirtualTryOnPage(
+          controller: controller,
+          initializeControllerFuture: initializeControllerFuture,
+        ),
+      ),
+    );
+  },
+  child: const Text('TRY NOW!',
+  style: TextStyle(color: Colors.black),),
+  style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.all(Colors.red.shade300),
+  ),
+)
+
                               ],
                             ));
   }

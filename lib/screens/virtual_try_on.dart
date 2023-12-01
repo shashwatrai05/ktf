@@ -25,7 +25,7 @@ class _VirtualTryOnPageState extends State<VirtualTryOnPage> {
 
   final snapchat_urls = [
     'https://lens.snapchat.com/4394187f0b4c428c913656befdfcc633?share_id=BBCCa9fseJ4&locale=en-GB',
-    'https://lens.snapchat.com/5f8ef5e0aae94cb08593385483380143?share_id=0A-hipzMDi0&locale=en-GB',
+    'https://www.snapchat.com/lens/f3cb910815e24a419f41d8d20d114398?sender_web_id=f3985bd4-b651-4f3b-986f-3bf2af8102bf&device_type=desktop&is_copy_url=true',
     'https://lens.snapchat.com/35bc001ea386442ea1b7954527950c8e?share_id=N7eWayFqB1c&locale=en-GB',
   ];
 
@@ -54,7 +54,7 @@ class _VirtualTryOnPageState extends State<VirtualTryOnPage> {
                   Text('Step 3:',
                       style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(
-                      'Once desired shoe is selected, you can proceed by clicking on the button on the app bar.'),
+                      'Once desired shoe is selected, you can proceed by going back to homescreen.'),
                 ],
               ),
             ),
@@ -79,12 +79,22 @@ class _VirtualTryOnPageState extends State<VirtualTryOnPage> {
             child: Row(
               children: [
                 TextButton(
-                  child: const Text(
-                    'Help',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: Container(
+                    padding: EdgeInsets.all(5),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    border: Border.all(
+      color: Colors.black,
+    ),
+  ),
+  child: const Text(
+    'Help',
+    style: TextStyle(
+      color: Colors.black,
+    ),
+  ),
+),
+
                   onPressed: _showMyDialog,
                 ),
               ],
